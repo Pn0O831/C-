@@ -78,10 +78,10 @@
             // 
             // lblFileStatus
             // 
-            this.lblFileStatus.AutoSize = true;
+            this.lblFileStatus.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblFileStatus.Location = new System.Drawing.Point(129, 69);
             this.lblFileStatus.Name = "lblFileStatus";
-            this.lblFileStatus.Size = new System.Drawing.Size(0, 12);
+            this.lblFileStatus.Size = new System.Drawing.Size(250, 70);
             this.lblFileStatus.TabIndex = 3;
             // 
             // btnSelectFile
