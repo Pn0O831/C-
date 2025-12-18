@@ -45,6 +45,8 @@
             this.btnPushRight = new System.Windows.Forms.Button();
             this.lblClock = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblReturnValue = new System.Windows.Forms.Label();
+            this.grpReturnValue.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblFileSelect
@@ -130,6 +132,7 @@
             // 
             // grpReturnValue
             // 
+            this.grpReturnValue.Controls.Add(this.lblReturnValue);
             this.grpReturnValue.Location = new System.Drawing.Point(26, 167);
             this.grpReturnValue.Name = "grpReturnValue";
             this.grpReturnValue.Size = new System.Drawing.Size(336, 119);
@@ -148,6 +151,7 @@
             this.btnYellow.TabIndex = 9;
             this.btnYellow.Text = "Yellow";
             this.btnYellow.UseVisualStyleBackColor = false;
+            this.btnYellow.Click += new System.EventHandler(this.btnYellow_Click);
             // 
             // btnGreen
             // 
@@ -160,6 +164,7 @@
             this.btnGreen.TabIndex = 10;
             this.btnGreen.Text = "Green";
             this.btnGreen.UseVisualStyleBackColor = false;
+            this.btnGreen.Click += new System.EventHandler(this.btnGreen_Click);
             // 
             // btnBlue
             // 
@@ -172,6 +177,7 @@
             this.btnBlue.TabIndex = 11;
             this.btnBlue.Text = "Blue";
             this.btnBlue.UseVisualStyleBackColor = false;
+            this.btnBlue.Click += new System.EventHandler(this.btnBlue_Click);
             // 
             // btnUpdateFile
             // 
@@ -207,19 +213,26 @@
             this.lblClock.TabIndex = 14;
             this.lblClock.Text = "00:00:00";
             // 
+            // lblReturnValue
+            // 
+            this.lblReturnValue.Location = new System.Drawing.Point(0, 15);
+            this.lblReturnValue.Name = "lblReturnValue";
+            this.lblReturnValue.Size = new System.Drawing.Size(336, 104);
+            this.lblReturnValue.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(521, 376);
+            this.Controls.Add(this.grpReturnValue);
             this.Controls.Add(this.lblClock);
             this.Controls.Add(this.btnPushRight);
             this.Controls.Add(this.btnUpdateFile);
             this.Controls.Add(this.btnBlue);
             this.Controls.Add(this.btnGreen);
             this.Controls.Add(this.btnYellow);
-            this.Controls.Add(this.grpReturnValue);
             this.Controls.Add(this.btnPushTop);
             this.Controls.Add(this.btnDisplayFile);
             this.Controls.Add(this.btnSelectFile);
@@ -230,6 +243,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form①";
+            this.grpReturnValue.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,6 +267,7 @@
         private System.Windows.Forms.Button btnPushRight;
         private System.Windows.Forms.Label lblClock;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblReturnValue;
     }
 }
 

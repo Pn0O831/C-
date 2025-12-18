@@ -49,5 +49,11 @@ namespace _2_27
                 MessageBox.Show(ex.Message,MessageManage.Title4,MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
+
+        private void btnYellow_Click(object sender, EventArgs e) => lblReturnValue.BackColor = Color.Yellow;
+
+        private void btnGreen_Click(object sender, EventArgs e) => lblReturnValue.BackColor = Color.Green;
+
+        private void btnBlue_Click(object sender, EventArgs e) => lblReturnValue.BackColor = Color.Blue;
     }
 }
