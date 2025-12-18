@@ -58,10 +58,5 @@ namespace _2_26_2
                 label1.ForeColor = Color.Black;
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
