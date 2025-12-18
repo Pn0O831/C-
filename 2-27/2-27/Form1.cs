@@ -41,12 +41,12 @@ namespace _2_27
                 }
                 else
                 {
-                    MessageBox.Show
+                    MessageBox.Show(MessageManage.Msg2,MessageManage.Title4,MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message,MessageManage.Title4,MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
     }
