@@ -32,7 +32,7 @@
             this.lblFileSelect = new System.Windows.Forms.Label();
             this.lblFileContent = new System.Windows.Forms.Label();
             this.txtFilePath = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblFileStatus = new System.Windows.Forms.Label();
             this.btnSelectFile = new System.Windows.Forms.Button();
             this.btnDisplayFile = new System.Windows.Forms.Button();
             this.btnPushTop = new System.Windows.Forms.Button();
@@ -74,13 +74,13 @@
             this.txtFilePath.Size = new System.Drawing.Size(250, 19);
             this.txtFilePath.TabIndex = 2;
             // 
-            // label3
+            // lblFileStatus
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(129, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 12);
-            this.label3.TabIndex = 3;
+            this.lblFileStatus.AutoSize = true;
+            this.lblFileStatus.Location = new System.Drawing.Point(129, 69);
+            this.lblFileStatus.Name = "lblFileStatus";
+            this.lblFileStatus.Size = new System.Drawing.Size(0, 12);
+            this.lblFileStatus.TabIndex = 3;
             // 
             // btnSelectFile
             // 
@@ -106,6 +106,7 @@
             this.btnDisplayFile.TabIndex = 5;
             this.btnDisplayFile.Text = "表示";
             this.btnDisplayFile.UseVisualStyleBackColor = false;
+            this.btnDisplayFile.Click += new System.EventHandler(this.btnDisplayFile_Click);
             // 
             // btnPushTop
             // 
@@ -222,7 +223,7 @@
             this.Controls.Add(this.btnPushTop);
             this.Controls.Add(this.btnDisplayFile);
             this.Controls.Add(this.btnSelectFile);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblFileStatus);
             this.Controls.Add(this.txtFilePath);
             this.Controls.Add(this.lblFileContent);
             this.Controls.Add(this.lblFileSelect);
@@ -239,7 +240,7 @@
         private System.Windows.Forms.Label lblFileSelect;
         private System.Windows.Forms.Label lblFileContent;
         private System.Windows.Forms.TextBox txtFilePath;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblFileStatus;
         private System.Windows.Forms.Button btnSelectFile;
         private System.Windows.Forms.Button btnDisplayFile;
         private System.Windows.Forms.Button btnPushTop;
