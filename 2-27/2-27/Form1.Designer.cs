@@ -121,6 +121,7 @@
             this.btnPushTop.TabIndex = 6;
             this.btnPushTop.Text = "PUSH";
             this.btnPushTop.UseVisualStyleBackColor = false;
+            this.btnPushTop.Click += new System.EventHandler(this.btnPushTop_Click);
             // 
             // panel1
             // 

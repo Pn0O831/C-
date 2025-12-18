@@ -60,5 +60,21 @@ namespace _2_27
         {
             lblClock.Text = DateTime.Now.ToString("HH:mm:ss");
         }
+
+        private void btnPushTop_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show(MessageManage.Msg1, MessageManage.Title3, MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+            {
+                using (Form2 f2 = new Form2())
+                {
+                    f2.SourceValue = lblFileStatus.Text;
+                    if (f2.ShowDialog() == DialogResult.OK)
+                    {
+                        lblReturnValue.Text = f2.ReturnValue;
+                    }
+                }
+            }
+        }
     }
 }
