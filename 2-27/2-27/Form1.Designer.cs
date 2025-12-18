@@ -38,14 +38,14 @@
             this.btnPushTop = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.grpReturnValue = new System.Windows.Forms.GroupBox();
+            this.lblReturnValue = new System.Windows.Forms.Label();
             this.btnYellow = new System.Windows.Forms.Button();
             this.btnGreen = new System.Windows.Forms.Button();
             this.btnBlue = new System.Windows.Forms.Button();
             this.btnUpdateFile = new System.Windows.Forms.Button();
             this.btnPushRight = new System.Windows.Forms.Button();
             this.lblClock = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblReturnValue = new System.Windows.Forms.Label();
+            this.tmrClock = new System.Windows.Forms.Timer(this.components);
             this.grpReturnValue.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -140,6 +140,13 @@
             this.grpReturnValue.TabStop = false;
             this.grpReturnValue.Text = "返却値";
             // 
+            // lblReturnValue
+            // 
+            this.lblReturnValue.Location = new System.Drawing.Point(0, 15);
+            this.lblReturnValue.Name = "lblReturnValue";
+            this.lblReturnValue.Size = new System.Drawing.Size(336, 104);
+            this.lblReturnValue.TabIndex = 15;
+            // 
             // btnYellow
             // 
             this.btnYellow.BackColor = System.Drawing.Color.Yellow;
@@ -213,12 +220,11 @@
             this.lblClock.TabIndex = 14;
             this.lblClock.Text = "00:00:00";
             // 
-            // lblReturnValue
+            // tmrClock
             // 
-            this.lblReturnValue.Location = new System.Drawing.Point(0, 15);
-            this.lblReturnValue.Name = "lblReturnValue";
-            this.lblReturnValue.Size = new System.Drawing.Size(336, 104);
-            this.lblReturnValue.TabIndex = 15;
+            this.tmrClock.Enabled = true;
+            this.tmrClock.Interval = 1000;
+            this.tmrClock.Tick += new System.EventHandler(this.tmrClock_Tick);
             // 
             // Form1
             // 
@@ -266,7 +272,7 @@
         private System.Windows.Forms.Button btnUpdateFile;
         private System.Windows.Forms.Button btnPushRight;
         private System.Windows.Forms.Label lblClock;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer tmrClock;
         private System.Windows.Forms.Label lblReturnValue;
     }
 }

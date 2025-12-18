@@ -55,5 +55,10 @@ namespace _2_27
         private void btnGreen_Click(object sender, EventArgs e) => lblReturnValue.BackColor = Color.Green;
 
         private void btnBlue_Click(object sender, EventArgs e) => lblReturnValue.BackColor = Color.Blue;
+
+        private void tmrClock_Tick(object sender, EventArgs e)
+        {
+            lblClock.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
     }
 }
