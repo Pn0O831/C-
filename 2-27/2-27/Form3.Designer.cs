@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.rdbMon = new System.Windows.Forms.RadioButton();
             this.rdbTue = new System.Windows.Forms.RadioButton();
             this.rdbWed = new System.Windows.Forms.RadioButton();
@@ -339,6 +340,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form3";
             this.Text = "Form③";
             this.Load += new System.EventHandler(this.Form3_Load);

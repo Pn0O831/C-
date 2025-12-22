@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lblFileSelect = new System.Windows.Forms.Label();
             this.lblFileContent = new System.Windows.Forms.Label();
             this.txtFilePath = new System.Windows.Forms.TextBox();
@@ -251,6 +252,7 @@
             this.Controls.Add(this.lblFileContent);
             this.Controls.Add(this.lblFileSelect);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form①";
             this.grpReturnValue.ResumeLayout(false);
