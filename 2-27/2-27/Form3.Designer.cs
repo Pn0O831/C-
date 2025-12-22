@@ -48,7 +48,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.rdbZoom = new System.Windows.Forms.RadioButton();
-            this.rdbSketch = new System.Windows.Forms.RadioButton();
+            this.rdbStretch = new System.Windows.Forms.RadioButton();
             this.rdbCenter = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlImage = new System.Windows.Forms.Panel();
@@ -165,6 +165,7 @@
             this.rdbYears.TabStop = true;
             this.rdbYears.Text = "Years";
             this.rdbYears.UseVisualStyleBackColor = true;
+            this.rdbYears.CheckedChanged += new System.EventHandler(this.rdbDays_CheckedChanged);
             // 
             // lblDaysRight
             // 
@@ -270,17 +271,17 @@
             this.rdbZoom.UseVisualStyleBackColor = true;
             this.rdbZoom.CheckedChanged += new System.EventHandler(this.rdbImageLayout_CheckedChanged);
             // 
-            // rdbSketch
+            // rdbStretch
             // 
-            this.rdbSketch.AutoSize = true;
-            this.rdbSketch.Location = new System.Drawing.Point(194, 275);
-            this.rdbSketch.Name = "rdbSketch";
-            this.rdbSketch.Size = new System.Drawing.Size(58, 16);
-            this.rdbSketch.TabIndex = 21;
-            this.rdbSketch.TabStop = true;
-            this.rdbSketch.Text = "Sketch";
-            this.rdbSketch.UseVisualStyleBackColor = true;
-            this.rdbSketch.CheckedChanged += new System.EventHandler(this.rdbImageLayout_CheckedChanged);
+            this.rdbStretch.AutoSize = true;
+            this.rdbStretch.Location = new System.Drawing.Point(194, 275);
+            this.rdbStretch.Name = "rdbStretch";
+            this.rdbStretch.Size = new System.Drawing.Size(60, 16);
+            this.rdbStretch.TabIndex = 21;
+            this.rdbStretch.TabStop = true;
+            this.rdbStretch.Text = "Stretch";
+            this.rdbStretch.UseVisualStyleBackColor = true;
+            this.rdbStretch.CheckedChanged += new System.EventHandler(this.rdbImageLayout_CheckedChanged);
             // 
             // rdbCenter
             // 
@@ -317,7 +318,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(547, 356);
             this.Controls.Add(this.rdbCenter);
-            this.Controls.Add(this.rdbSketch);
+            this.Controls.Add(this.rdbStretch);
             this.Controls.Add(this.rdbZoom);
             this.Controls.Add(this.cmbSelect);
             this.Controls.Add(this.chk3);
@@ -370,7 +371,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.RadioButton rdbZoom;
-        private System.Windows.Forms.RadioButton rdbSketch;
+        private System.Windows.Forms.RadioButton rdbStretch;
         private System.Windows.Forms.RadioButton rdbCenter;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlImage;

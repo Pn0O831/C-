@@ -70,7 +70,7 @@ namespace _2_27
 
                 string content = File.ReadAllText(path);
 
-                lblFileContent.Text = content;
+                lblFileStatus.Text = content;
             }
             catch (Exception ex)
             {
@@ -136,5 +136,6 @@ namespace _2_27
                 MessageBox.Show(ex.Message,MessageManage.Title4);
             }
         }
+
     }
 }
