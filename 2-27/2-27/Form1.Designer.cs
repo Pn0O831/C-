@@ -44,8 +44,8 @@
             this.btnBlue = new System.Windows.Forms.Button();
             this.btnUpdateFile = new System.Windows.Forms.Button();
             this.btnPushRight = new System.Windows.Forms.Button();
-            this.lblClock = new System.Windows.Forms.Label();
             this.tmrClock = new System.Windows.Forms.Timer(this.components);
+            this.lblClock = new _2_27.GradientLabel();
             this.grpReturnValue.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -210,16 +210,7 @@
             this.btnPushRight.TabIndex = 13;
             this.btnPushRight.Text = "PUSH";
             this.btnPushRight.UseVisualStyleBackColor = false;
-            // 
-            // lblClock
-            // 
-            this.lblClock.AutoSize = true;
-            this.lblClock.Font = new System.Drawing.Font("MS UI Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblClock.Location = new System.Drawing.Point(53, 308);
-            this.lblClock.Name = "lblClock";
-            this.lblClock.Size = new System.Drawing.Size(192, 48);
-            this.lblClock.TabIndex = 14;
-            this.lblClock.Text = "00:00:00";
+            this.btnPushRight.Click += new System.EventHandler(this.btnPushRight_Click);
             // 
             // tmrClock
             // 
@@ -227,14 +218,25 @@
             this.tmrClock.Interval = 1000;
             this.tmrClock.Tick += new System.EventHandler(this.tmrClock_Tick);
             // 
+            // lblClock
+            // 
+            this.lblClock.EndColor = System.Drawing.Color.Blue;
+            this.lblClock.Font = new System.Drawing.Font("MS UI Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblClock.Location = new System.Drawing.Point(26, 286);
+            this.lblClock.Name = "lblClock";
+            this.lblClock.Size = new System.Drawing.Size(225, 70);
+            this.lblClock.StartColor = System.Drawing.SystemColors.Control;
+            this.lblClock.TabIndex = 14;
+            this.lblClock.Text = "00:00:00";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(521, 376);
-            this.Controls.Add(this.grpReturnValue);
             this.Controls.Add(this.lblClock);
+            this.Controls.Add(this.grpReturnValue);
             this.Controls.Add(this.btnPushRight);
             this.Controls.Add(this.btnUpdateFile);
             this.Controls.Add(this.btnBlue);
@@ -272,9 +274,9 @@
         private System.Windows.Forms.Button btnBlue;
         private System.Windows.Forms.Button btnUpdateFile;
         private System.Windows.Forms.Button btnPushRight;
-        private System.Windows.Forms.Label lblClock;
         private System.Windows.Forms.Timer tmrClock;
         private System.Windows.Forms.Label lblReturnValue;
+        private _2_27.GradientLabel lblClock;
     }
 }
 
