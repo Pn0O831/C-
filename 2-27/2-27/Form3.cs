@@ -23,6 +23,14 @@ namespace _2_27
             btnAction.Enabled = allchecked;
         }
 
+        private string GetRadioButtonValue()
+        {
+            if (rdbDays.Checked) return "Days";
+            if (rdbYears.Checked) return "Years";
+            return "";
+
+        }
+
         public Form3()
         {
             InitializeComponent();
@@ -112,7 +120,7 @@ namespace _2_27
         private void rdbImageLayout_CheckedChanged(object sender, EventArgs e)
         {
             RadioButton rdb = sender as RadioButton;
-            if (rdb == null && !rdb.Checked) return;
+            if (rdb == null || !rdb.Checked) return;
             switch(rdb.Name)
             {
                 case "rdbZoom":
@@ -124,6 +132,20 @@ namespace _2_27
                 case "rdbCenter":
                     pnlImage.BackgroundImageLayout = ImageLayout.Center;
                     break;
+            }
+        }
+
+        private void cmbSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selected = cmbSelect.Text;
+            if (string.IsNullOrWhiteSpace(selected))
+            {
+                lblDaysRight.Text = GetRadioButtonValue();
+                return;
+            }
+            else
+            {
+                lblDaysRight.Text = cmbSelect.SelectedItem.ToString();
             }
         }
     }

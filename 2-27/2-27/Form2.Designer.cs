@@ -198,7 +198,7 @@
             this.btnJoin.Name = "btnJoin";
             this.btnJoin.Size = new System.Drawing.Size(75, 23);
             this.btnJoin.TabIndex = 14;
-            this.btnJoin.Text = "形式";
+            this.btnJoin.Text = "形成";
             this.btnJoin.UseVisualStyleBackColor = false;
             this.btnJoin.Click += new System.EventHandler(this.btnJoin_Click);
             // 

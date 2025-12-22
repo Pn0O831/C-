@@ -216,10 +216,12 @@
             this.cmbSelect.Name = "cmbSelect";
             this.cmbSelect.Size = new System.Drawing.Size(121, 20);
             this.cmbSelect.TabIndex = 15;
+            this.cmbSelect.SelectedIndexChanged += new System.EventHandler(this.cmbSelect_SelectedIndexChanged);
             // 
             // btnAction
             // 
             this.btnAction.BackColor = System.Drawing.Color.Yellow;
+            this.btnAction.Enabled = false;
             this.btnAction.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnAction.Location = new System.Drawing.Point(179, 36);
             this.btnAction.Name = "btnAction";

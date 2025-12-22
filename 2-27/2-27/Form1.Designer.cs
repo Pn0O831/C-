@@ -198,6 +198,7 @@
             this.btnUpdateFile.TabIndex = 12;
             this.btnUpdateFile.Text = "ファイル更新";
             this.btnUpdateFile.UseVisualStyleBackColor = false;
+            this.btnUpdateFile.Click += new System.EventHandler(this.btnUpdateFile_Click);
             // 
             // btnPushRight
             // 

@@ -58,21 +58,23 @@ namespace _2_27
 
         private void btnDisplayFile_Click(object sender, EventArgs e)
         {
+            string path = txtFilePath.Text; 
+
             try
             {
-                if(File.Exists(txtFilePath.Text))
+                if (!File.Exists(path))
                 {
-                    string content = File.ReadAllText(txtFilePath.Text);
-                    lblFileStatus.Text = content;
+                    MessageBox.Show(MessageManage.Msg2, MessageManage.Title4);
+                    return;
                 }
-                else
-                {
-                    MessageBox.Show(MessageManage.Msg2,MessageManage.Title4,MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+
+                string content = File.ReadAllText(path);
+
+                lblFileContent.Text = content;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,MessageManage.Title4,MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, MessageManage.Title4);
             }
         }
 
@@ -112,6 +114,26 @@ namespace _2_27
                 {
                     f3.ShowDialog();
                 }
+            }
+        }
+
+        private void btnUpdateFile_Click(object sender, EventArgs e)
+        {
+            string path = txtFilePath.Text;
+            string content = lblReturnValue.Text;
+            try
+            {
+                if(!File.Exists(path))
+                {
+                    MessageBox.Show(MessageManage.Msg2,MessageManage.Title4);
+                    return;
+                }
+                File.WriteAllText(path, content);
+                MessageBox.Show(MessageManage.Msg3,MessageManage.Title2);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message,MessageManage.Title4);
             }
         }
     }
